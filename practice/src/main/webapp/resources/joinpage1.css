@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 100px 30px 1fr 100px;
+    height: 900px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header {
+    background-color: coral;
+    color: whitesmoke;
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    padding-top: 6px;
+    background-color: peru;
+    color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+section{
+display: flex;
+justify-content: center;
+background-color: whitesmoke;
+padding-top: 30px;
+
+}
+
+section>td {
+    border: solid 5px gray;
+}
+h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    height: 300px;
+}
+
+form {
+    text-align: center;
+    width: 700px;
+}
+
+td {
+    background-color: lightcoral;
+    border: solid 3px lightcoral;
+    font-size: large;
+    font-style: normal;
+    color: whitesmoke;
+}
+
+input{
+    height: 25px;
+    width: 250px;
+}
+
+footer{
+    background-color: coral;
+    text-align: center;
+    padding: 30px;
+}
+button{
+    padding: 12px 35px;
+    border-radius: 8px;
+    border: solid 1px gray;
+    background-color: white;
+    font-size: medium;
+    font-style: normal;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightcoral;
+  }
+
+div{
+    height: 100px;
+    padding-top: 30px;
+}
+
+select{
+	 width: 250px;
+	 text-align: center;
+	 height: 30px;
+}

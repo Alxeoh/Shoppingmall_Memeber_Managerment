@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>practice</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- Servlet Mapping -->
+	<servlet>
+		<servlet-name>joinAction</servlet-name>
+		<servlet-class>U.controller.joinAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>joinAction</servlet-name>
+		<url-pattern>/joinAction</url-pattern>
+	</servlet-mapping>
+
+	<!-- JSP Mapping -->
+	<servlet>
+		<servlet-name>join</servlet-name>
+		<jsp-file>/views/join.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>join</servlet-name>
+		<url-pattern>/join</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>modify</servlet-name>
+		<jsp-file>/views/modify.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modify</servlet-name>
+		<url-pattern>/modify</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>search</servlet-name>
+		<jsp-file>/views/search.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>search</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>searchSales</servlet-name>
+		<jsp-file>/views/searchSales.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>searchSales</servlet-name>
+		<url-pattern>/searchSales</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+</web-app>
