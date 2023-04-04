@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -19,6 +20,7 @@ public class DBManager {
 	public static Connection getConnection() {
 		Connection conn = null;
 		try {
+			
 			// JNDI
 			// Java Naming and Directory Interface
 			
