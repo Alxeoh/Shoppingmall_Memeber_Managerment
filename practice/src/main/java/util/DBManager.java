@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Timestamp;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -19,20 +18,22 @@ public class DBManager {
 	
 	public static Connection getConnection() {
 		Connection conn = null;
+		// JNDI
+		// Java Naming and Directory Interface
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String username = "C##SYSTEM";
+		String password = "1234";
+		
+		
 		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(url, username, password);
 			
-			// JNDI
-			// Java Naming and Directory Interface
 			
-			Context init = new InitialContext();
-			DataSource source = (DataSource) init.lookup("java:comp/env/jdbc/test");
-			conn = source.getConnection();
-			Class.forName(driver);
-			conn = DriverManager.getConnection(url, userName,password);
-			System.out.println("db연동 성공");
+			System.out.println("DB연동 성공");
 		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println("db연동 실패");
+			e.printStackTrace();
+			System.out.println("DB연동 실패");
 		}
 		return conn;
 	}
